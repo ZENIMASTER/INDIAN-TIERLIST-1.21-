@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian TierList 1.21+</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a0a;color:white}
+header{background:#111;padding:20px;text-align:center;font-size:30px;font-weight:bold;border-bottom:2px solid gold}
+.sub{text-align:center;color:#aaa;padding:8px}
+.search-box{padding:15px}
+#search{width:100%;padding:12px;border:none;border-radius:12px;background:#181818;color:white}
+.player{display:flex;align-items:center;gap:15px;background:#131313;margin:12px;padding:12px;border-radius:15px}
+.rank{width:45px;height:45px;display:flex;align-items:center;justify-content:center;font-weight:bold;border-radius:10px}
+.gold{background:gold;color:black}.silver{background:silver;color:black}.bronze{background:#cd7f32;color:black}.normal{background:#222}
+.head{width:55px;height:55px;border-radius:10px}
+.info{flex:1}.name{font-size:18px;font-weight:bold}.points{color:#ffb300;font-size:14px;margin-top:3px}
+.badges{margin-top:6px}.badges span{display:inline-block;background:#7c3aed;padding:4px 8px;border-radius:20px;margin:2px;font-size:11px}
+.region{background:#2563eb;padding:6px 10px;border-radius:20px;font-size:12px}
+footer{text-align:center;padding:20px;color:#888}
+</style>
+</head>
+<body>
+<header>🏆 Indian TierList 1.21+</header>
+<div class="sub">Owner: ZENIMASTER</div>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search Players..." onkeyup="searchPlayers()">
+</div>
+
+<div id="leaderboard">
+<div class="player">
+<div class="rank gold">1</div>
+<img class="head" src="https://mc-heads.net/avatar/ZENIMASTER">
+<div class="info">
+<div class="name">ZENIMASTER</div>
+<div class="points">150 Points • Combat Ace</div>
+<div class="badges"><span>⚔️ HT3</span><span>🪓 HT3</span><span>💎 LT2</span></div>
+</div>
+<div class="region">AS/AU</div>
+</div>
+</div>
+
+<footer>Indian TierList 1.21+ © ZENIMASTER</footer>
+
+<script>
+function searchPlayers(){
+let input=document.getElementById("search").value.toLowerCase();
+let players=document.getElementsByClassName("player");
+for(let i=0;i<players.length;i++){
+let text=players[i].innerText.toLowerCase();
+players[i].style.display=text.includes(input)?"":"none";
+}
+}
+</script>
+</body>
+</html>
